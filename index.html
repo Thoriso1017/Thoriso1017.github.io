@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero" class="hero">
+    <div class="hero-image">
+        <img src="profile.jpg" alt="Your Profile Picture">
+    </div>
+    <div class="hero-content">
+        <h1>Hi, I'm Thoriso Ika</h1>
+        <p>Aspiring Innovator & Builder</p>
+        <a href="#contact" class="button">Get in Touch</a>
+    </div>
+</section>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>I am a dedicated and detail-oriented IT professional with a strong foundation in technical support, system troubleshooting, and infrastructure management. Holding a National Diploma in IT, I have developed a deep understanding of networking, hardware maintenance, and software solutions, ensuring seamless functionality and user efficiency.</p>
+    </section>
+
+    <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+        <div class="project-card">
+            <h3>Simple To-Do List Web App</h3>
+             <p>My first interactive web application, built using HTML for structure, CSS for styling, and basic JavaScript for functionality. Users can add tasks, mark them as complete, and (currently) see them listed in real-time.</p>
+             <a href="#todo">View Project</a>
+            </div>
+        <div class="project-card">
+            <h3>Coming Soon...</h3>
+            <p>Excited to start working on my next project, potentially exploring a simple automation tool or a basic mobile app concept. Stay tuned!</p>
+            <a href="#">View Project</a>
+        </div>
+    </div>
+</section>
+
+<section id="todo" class="todo">
+    <h2>My To-Do List</h2>
+    <div class="todo-input">
+        <input type="text" id="newTask" placeholder="Add new task...">
+        <button id="addTaskBtn">Add</button>
+    </div>
+    <ul id="taskList">
+        </ul>
+</section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+       
+        <form>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea placeholder="Your Message"></textarea>
+            <button type="submit" class="button">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Thoriso Ika. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
