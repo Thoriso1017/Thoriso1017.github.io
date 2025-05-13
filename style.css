@@ -284,25 +284,26 @@ footer {
 
 .todo-input input[type="text"] {
     flex-grow: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1em;
+    padding: 12px; /* Increased padding */
+    border: 1px solid #ddd; /* Lighter border */
+    border-radius: 8px; /* More rounded corners */
+    font-size: 1.1em;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
 }
 
 .todo-input button {
-    background-color: #28a745; /* Green color for "Add" */
+    background-color: #007bff; /* Primary blue color */
     color: white;
     border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
+    padding: 12px 20px; /* Adjusted padding */
+    border-radius: 8px; /* More rounded corners */
     cursor: pointer;
-    font-size: 1em;
+    font-size: 1.1em;
     transition: background-color 0.3s ease;
 }
 
 .todo-input button:hover {
-    background-color: #1e7e34;
+    background-color: #0056b3;
 }
 
 #taskList {
@@ -330,24 +331,106 @@ footer {
 }
 
 #taskList li.completed {
-    text-decoration: line-through;
-    color: #777;
-    background-color: #d3d3d3;
+    text-decoration: none; /* Remove line-through */
+    color: #888;
+    background-color: #e0e0e0; /* Lighter background */
+    opacity: 0.8;
 }
 
 
 #taskList li button.delete-btn {
-    background-color: #dc3545;
+    background-color: #ff6347; /* Tomato color */
     color: white;
     border: none;
-    padding: 5px 10px;
-    border-radius: 3px;
+    padding: 8px 12px; /* Adjusted padding */
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 0.8em;
+    font-size: 0.9em;
     margin-left: 10px;
     transition: background-color 0.3s ease;
 }
 
 #taskList li button.delete-btn:hover {
-    background-color: #c82333;
+    background-color: #d94e38;
+}
+
+#taskList li.completed::before {
+    content: '\u2713'; /* Checkmark icon */
+    display: inline-block;
+    margin-right: 8px;
+    color: green;
+    font-weight: bold;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+
+    header nav ul {
+        text-align: center; /* Center navigation on smaller screens */
+    }
+
+    header nav ul li {
+        display: block; /* Stack navigation links vertically */
+        margin: 10px 0;
+    }
+
+    .hero {
+        padding: 60px 20px; /* Adjust hero padding */
+    }
+
+    .hero h1 {
+        font-size: 2em; /* Smaller hero heading */
+    }
+
+    .hero p {
+        font-size: 1.1em; /* Smaller hero paragraph */
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr; /* Single column for projects on smaller screens */
+    }
+
+    .todo {
+        padding: 40px 15px; /* Adjust todo padding */
+    }
+
+    .todo-input {
+        flex-direction: column; /* Stack input and button vertically */
+        gap: 10px;
+        max-width: 100%; /* Full width for input on smaller screens */
+    }
+
+    .todo-input input[type="text"] {
+        width: 100%; /* Full width input */
+    }
+
+    .todo-input button {
+        width: 100%; /* Full width button */
+    }
+
+    #taskList {
+        max-width: 100%; /* Full width task list */
+    }
+}
+
+/* Further adjustments for even smaller screens (phones) */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.7em; /* Even smaller hero heading */
+    }
+
+    .hero p {
+        font-size: 1em; /* Even smaller hero paragraph */
+    }
+
+    h2 {
+        font-size: 1.8em; /* Smaller section headings */
+    }
+
+    .project-card {
+        padding: 15px; /* Reduce padding in project cards */
+    }
 }
