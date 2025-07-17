@@ -87,7 +87,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <ul id="taskList">
         </ul>
 
-     <form id="auditForm" action="https://formspree.io/f/xrblbgvq" method="POST">
+        <form id="auditForm" action="https://formspree.io/f/xrblbgvq" method="POST">
   <input type="text" name="name" placeholder="Your Name" required><br>
   <input type="email" name="email" placeholder="Your Email" required><br>
   <input type="tel" name="phone" placeholder="Phone Number"><br>
@@ -95,6 +95,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <input type="text" name="location" placeholder="Location"><br>
   <button type="submit">Request Free Audit</button>
 </form>
+
+<p id="thankYou" style="display:none;">Thanks! We'll be in touch shortly.</p>
+
+<script>
+  const form = document.getElementById("auditForm");
+  const thankYou = document.getElementById("thankYou");
+
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    const data = new FormData(form);
+    fetch(form.action, {
+      method: "POST",
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        form.reset();
+        thankYou.style.display = "block";
+      } else {
+        alert("There was a problem. Please try again.");
+      }
+    });
+  });
+</script>
+
+    
+     
 </section>
 
     
