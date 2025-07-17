@@ -87,40 +87,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <ul id="taskList">
         </ul>
 
-        <form id="auditForm" action="https://formspree.io/f/xrblbgvq" method="POST">
-  <input type="text" name="name" placeholder="Your Name" required><br>
-  <input type="email" name="email" placeholder="Your Email" required><br>
-  <input type="tel" name="phone" placeholder="Phone Number"><br>
-  <input type="text" name="business" placeholder="Business Type"><br>
-  <input type="text" name="location" placeholder="Location"><br>
-  <button type="submit">Request Free Audit</button>
-</form>
-
-<p id="thankYou" style="display:none;">Thanks! We'll be in touch shortly.</p>
-
+        <!-- MailerLite Universal -->
 <script>
-  const form = document.getElementById("auditForm");
-  const thankYou = document.getElementById("thankYou");
-
-  form.addEventListener("submit", function(event) {
-    event.preventDefault();
-    const data = new FormData(form);
-    fetch(form.action, {
-      method: "POST",
-      body: data,
-      headers: {
-        'Accept': 'application/json'
-      }
-    }).then(response => {
-      if (response.ok) {
-        form.reset();
-        thankYou.style.display = "block";
-      } else {
-        alert("There was a problem. Please try again.");
-      }
-    });
-  });
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '1672694');
 </script>
+<!-- End MailerLite Universal -->
 
     
      
