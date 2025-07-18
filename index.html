@@ -126,12 +126,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </script>
 
         
-        <form>
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Your Email">
-            <textarea placeholder="Your Message"></textarea>
-            <button type="submit" class="button">Send Message</button>
-        </form>
+        <form id="lead-form">
+  <input type="text" id="name" placeholder="Your Name" required />
+  <input type="email" id="email" placeholder="Email" required />
+
+  <!-- Segment Selection -->
+  <select id="tag" required>
+    <option value="">Select Lead Type</option>
+    <option value="Free Audit Lead">Free Audit Lead</option>
+    <option value="Recycling Guide Downloader">Recycling Guide Downloader</option>
+    <option value="Customer">Customer</option>
+  </select>
+
+  <button type="submit">Submit</button>
+</form>
+
+<p id="status"></p>
+
     </section>
 
     <footer>
